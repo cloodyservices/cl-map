@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cl-map</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="vendor/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <svg id="blip-filter-defs" style="position:absolute;width:0;height:0;pointer-events:none;overflow:hidden;" aria-hidden="true">
+            <defs id="blip-filters"></defs>
+        </svg>
+
+        <section id="screen-map" class="screen">
+            <div id="map"></div>
+            <div class="map-zone" id="map-zone">
+                <div class="z1" id="map-zone-1"></div>
+                <div class="z2" id="map-zone-2"></div>
+                <div class="z3" id="map-zone-3"></div>
+            </div>
+            <div class="map-panel">
+                <div class="map-panel-head">
+                    <span class="map-panel-title" data-str="locations">Locations</span>
+                    <div class="map-search">
+                        <input type="text" id="map-search" autocomplete="off" spellcheck="false">
+                        <span class="map-search-count" id="map-search-count">0/250</span>
+                    </div>
+                </div>
+                <div class="map-list" id="map-list"></div>
+            </div>
+        </section>
+
+        <div class="scanlines" id="scanlines"></div>
+        <div class="hints" id="hints"></div>
+    </div>
+
+    <script src="vendor/leaflet.js"></script>
+    <script src="js/blips.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
